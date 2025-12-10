@@ -13,10 +13,8 @@ import {
 
 const HeroSection: React.FC = () => {
   const handleGetStarted = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    const appSubdomain = process.env.REACT_APP_APP_SUBDOMAIN || 'app.ecomhealthperks.com';
+    window.open(`https://${appSubdomain}`, '_blank');
   };
 
   const handleLearnMore = () => {
